@@ -1,19 +1,19 @@
 # Build a shared binaries bundle of SDL2 and SDL2_* libs for Android
 
-This document contains instruction for manual build bundle of SDL2 libs for using in https://github.com/ru-ace/SDL2Droid-CS 
+This document contains instruction for manual build bundle of SDL2 libs for using in [SDL2-CS-Xamarin.Android](https://github.com/ru-ace/SDL2-CS-Xamarin.Android)
 
 At the end you will got precompiled libs for `arm64-v8a`, `armeabi-v7a`, `x86`, `x86_64`:
 * `SDL2` 2.0.8 - cause it needs API Level 19 (2.0.9 wants >= 26)
 * `SDL2_image` 2.0.4
 * `SDL2_mixer` 2.0.4
 * `SDL2_ttf` 2.0.15
-* `libmain.so` - wrapper for SDL2Droid-CS
+* `libmain.so` - wrapper for [SDL2-CS-Xamarin.Android](https://github.com/ru-ace/SDL2-CS-Xamarin.Android)
 
 ## Credits
 
 * SDL2 - https://www.libsdl.org/
 * SDL2 Wiki - https://wiki.libsdl.org/Android (section 4.1)
-* SDL2Droid-CS (original) - https://github.com/0x0ade/SDL2Droid-CS
+* SDL2Droid-CS - https://github.com/0x0ade/SDL2Droid-CS
 
 ## Pre-requisites
 
@@ -72,9 +72,12 @@ cd ~/Android/SDL2/build/org.libsdl/app/jni/
 ln -s ~/Android/SDL2_image ./
 ln -s ~/Android/SDL2_mixer ./
 ln -s ~/Android/SDL2_ttf ./
-rm src/*
+rm ~/Android/SDL2/build/org.libsdl/app/jni/src/*
+cd ~/Android/SDL2/build/org.libsdl/app/jni/src/
+wget https://raw.githubusercontent.com/ru-ace/SDL2-CS-Xamarin.Android/master/SDL2Droid-CS-Native/wrapper/Android.mk
+wget https://raw.githubusercontent.com/ru-ace/SDL2-CS-Xamarin.Android/master/SDL2Droid-CS-Native/wrapper/sdl2droid-cs-wrapper.c
+wget https://raw.githubusercontent.com/ru-ace/SDL2-CS-Xamarin.Android/master/SDL2Droid-CS-Native/wrapper/sdl2droid-cs-wrapper.h
 ```
-* Copy files from https://github.com/ru-ace/SDL2Droid-CS/tree/master/SDL2Droid-CS-Native/wrapper to `~/Android/SDL2/build/org.libsdl/app/jni/src/`
 * Edit `~/Android/SDL2/build/org.libsdl/app/jni/Application.mk` change `APP_PLATFORM` to `android-19`
 * Edit `~/Android/SDL2_image/Android.mk` change `WEBP_LIBRARY_PATH` to `external/libwebp-1.0.0`
 

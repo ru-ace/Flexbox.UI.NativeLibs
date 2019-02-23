@@ -18,14 +18,14 @@ For platforms:
 
 * platforms and architectures will be expanded in future during porting time.
 
-Androids libs are useful for porting projects using [SDL2Droid-CS](https://github.com/ru-ace/SDL2Droid-CS/)
+Androids libs are useful for porting projects using proof-of-concept [SDL2-CS-Xamarin.Android](https://github.com/ru-ace/SDL2-CS-Xamarin.Android)
 
 Please note that libs not stripped.
 
 ## Why?
 
 * I need binaries for developing and testing projects written in C#(mono) with [SDL2-CS](https://github.com/flibitijibibo/SDL2-CS/) on different platforms.
-* I has several crosslatform linked project, so I decide to create one git submodule with all needed precompiled libraries, cause i need identical version of libs at different platforms and all projects
+* I has several crossplatform linked project, so I decide to create one git submodule with all needed precompiled libraries, cause i need identical version of libs at different platforms and all projects
 * I stuck with SDL2 version 2.0.8 - this is version could be used with Android API Level 19 (2.0.9 wants >= 26) 
 
 ## Manual builds
