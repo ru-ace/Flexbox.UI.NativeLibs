@@ -1,4 +1,4 @@
-# Build a shared binaries bundle of SDL and SDL_* libs for Android
+# Build a shared binaries bundle of SDL2 and SDL2_* libs for Android
 
 This document contains instruction for manual build bundle of SDL2 libs for using in https://github.com/ru-ace/SDL2Droid-CS 
 

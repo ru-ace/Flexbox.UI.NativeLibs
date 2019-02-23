@@ -1,4 +1,4 @@
-# Build a shared binaries bundle of SDL and SDL_* libs for Linux
+# Build a shared binaries bundle of SDL2 and SDL2_* libs for Linux
 
 This document contains instruction for manual build bundle of SDL2 libs for linux
 

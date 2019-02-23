@@ -1,4 +1,4 @@
-# Create a shared binaries bundle of SDL and SDL_* libs for Windows
+# Create a shared binaries bundle of SDL2 and SDL2_* libs for Windows
 
 This document contains instruction for creating bundle of SDL2 libs for windows
 
