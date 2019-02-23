@@ -13,6 +13,7 @@ It contain libs:
 
 For platforms:
 * `android`: `arm64-v8a`, `armeabi-v7a`, `x86`, `x86_64`
+* `osx`: `>=10.6`
 * `linux`: `x86_64`
 * `windows`: `x86`, `x86_64`
 
@@ -32,5 +33,6 @@ Please note that libs not stripped.
 
 You can build libs bundle by yourself using instructions from this repo:
 * [Android](./BUILD.android.md)
+* [macOS](./BUILD.osx.md)
 * [Linux](./BUILD.linux.md)
 * [Windows](./BUILD.windows.md)
