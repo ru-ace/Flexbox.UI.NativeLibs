@@ -27,7 +27,7 @@ Please note that libs not stripped.
 
 * I need binaries for developing and testing projects written in C#(mono) with [SDL2-CS](https://github.com/flibitijibibo/SDL2-CS/) on different platforms.
 * I has several crossplatform linked project, so I decide to create one git submodule with all needed precompiled libraries, cause i need identical version of libs at different platforms and all projects
-* Needs to be use SDL2 version 2.0.8 for linux  - this is version could be used with Android API Level 19 (2.0.9 wants >= 26) 
+* Needs to be use SDL2 version 2.0.8 for linux - this is version could be used with Android API Level 19 (2.0.9 wants >= 26) 
 
 ## Manual builds
 
