@@ -1,9 +1,9 @@
-# Build a shared binaries bundle of SDL2 and SDL2_* libs for Android
+# Building bundle of `SDL2*` and related shared libs for Android
 
-This document contains instruction for manual build bundle of SDL2 libs for using in [SDL2-CS-Xamarin.Android](https://github.com/ru-ace/SDL2-CS-Xamarin.Android)
+This document contains instructions for manually building bundle of SDL2 shared libs for using in [SDL2-CS-Xamarin.Android](https://github.com/ru-ace/SDL2-CS-Xamarin.Android)
 
 At the end you will got precompiled libs for `arm64-v8a`, `armeabi-v7a`, `x86`, `x86_64`:
-* `SDL2` 2.0.8 - cause it needs API Level 19 (2.0.9 wants >= 26)
+* `SDL2` 2.0.8 - will not be updated, because 2.0.9 wants Android API Level >= 26 
 * `SDL2_image` 2.0.4
 * `SDL2_mixer` 2.0.4
 * `SDL2_ttf` 2.0.15

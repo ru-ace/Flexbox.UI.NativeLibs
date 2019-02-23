@@ -1,12 +1,12 @@
 # SDL2-CS-libs-bundle
 
-This repo contains precompiled SDL2 & SDL2_* libs for various platforms. 
+This repo contains precompiled `SDL2*` and related shared libs for various platforms. 
 
-It uses as git submodule for my multi-platform projects written using [SDL2-CS](https://github.com/flibitijibibo/SDL2-CS/) (C# wrapper for SDL2).
+I use it as a git submodule for my multi-platform projects written using [SDL2-CS](https://github.com/flibitijibibo/SDL2-CS/) (C# wrapper for SDL2).
 
 
-Libs:
-* `SDL2` 2.0.8
+SDL2 libs:
+* `SDL2` 2.0.8 - will not be updated, because 2.0.9 wants Android API Level >= 26 
 * `SDL2_image` 2.0.4
 * `SDL2_mixer` 2.0.4
 * `SDL2_ttf` 2.0.15
@@ -17,21 +17,21 @@ Platforms:
 * `linux`: `x86_64`
 * `windows`: `x86`, `x86_64`
 
-List platforms and architectures will be expanded in future during porting time.
+The list of platforms and architectures will be expanded in the future during porting.
 
-Androids libs are useful for porting projects using proof-of-concept [SDL2-CS-Xamarin.Android](https://github.com/ru-ace/SDL2-CS-Xamarin.Android)
+Android libraries are useful for porting projects using [SDL2-CS-Xamarin.Android](https://github.com/ru-ace/SDL2-CS-Xamarin.Android)
 
 Please note that libs not stripped.
 
 ## Why?
 
-* I need binaries for developing and testing projects written in C#(mono) with [SDL2-CS](https://github.com/flibitijibibo/SDL2-CS/) on different platforms.
-* I has several crossplatform linked project, so I decide to create one git submodule with all needed precompiled libraries, cause i need identical version of libs at different platforms and all projects
-* Needs to be use SDL2 version 2.0.8 for linux - this is version could be used with Android API Level 19 (2.0.9 wants >= 26) 
+* I need this libs for developing and testing projects written in C#(mono) with [SDL2-CS](https://github.com/flibitijibibo/SDL2-CS/) on different platforms.
+* I have several cross-platform linked projects, and this repository allows me to use one git submodule with all the necessary pre-compiled libraries in all related projects.
+* I need identical versions of libraries on different platforms and in all related projects.
 
 ## Manual builds
 
-You can build libs bundle by yourself using instructions from this repo:
+You can build bundle of libs by yourself using the instructions from `BUILD.*.md`:
 * [Android](./BUILD.android.md)
 * [macOS](./BUILD.osx.md)
 * [Linux](./BUILD.linux.md)

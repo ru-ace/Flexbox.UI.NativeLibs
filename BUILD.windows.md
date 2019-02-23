@@ -1,9 +1,9 @@
-# Create a shared binaries bundle of SDL2 and SDL2_* libs for Windows
+# Creating bundle of `SDL2*` and related shared libs for Windows
 
-This document contains instruction for creating bundle of SDL2 libs for windows
+This document contains instruction for creating bundle of SDL2 shared libs for Windows
 
 At the end you will got precompiled libs for `x86`, `x86_64`:
-* `SDL2` 2.0.8 - cause it needs Android API Level 19 (2.0.9 wants >= 26)
+* `SDL2` 2.0.8 - will not be updated, because 2.0.9 wants Android API Level >= 26 
 * `SDL2_image` 2.0.4
 * `SDL2_mixer` 2.0.4
 * `SDL2_ttf` 2.0.15
