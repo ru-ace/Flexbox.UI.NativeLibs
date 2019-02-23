@@ -1,4 +1,4 @@
-# SDL2-libs-bundle
+# SDL2-CS-libs-bundle
 
 This repo contains precompiled SDL2 & SDL2_* libs for various platforms. 
 
