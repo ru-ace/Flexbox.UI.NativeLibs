@@ -31,7 +31,7 @@ Please note that libs not stripped.
 
 ## How to use in your project
 
-1. Add this repo as submodule to root of your project (directory where `.csproj` file) as `libs`  
+1. Add this repo as submodule to root of your project directory(where `.csproj` file) as `libs`  
 ```
 git submodule init
 git submodule add https://github.com/ru-ace/SDL2-CS-libs-bundle.git libs
