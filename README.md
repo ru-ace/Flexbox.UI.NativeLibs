@@ -36,7 +36,7 @@ Please note that libs not stripped.
 git submodule init
 git submodule add https://github.com/ru-ace/SDL2-CS-libs-bundle.git libs
 ```
-2. Edit `.csproj` file and insert text from [SDL-CS/add_to_csproj.txt](./SDL-CS/add_to_csproj.txt)
+2. Edit `.csproj` file and insert text from [SDL2-CS/add_to_csproj.txt](./SDL2-CS/add_to_csproj.txt)
 3. Open your project/solution and add lines before calls any SDL2 functions:
 ```
 // Init libs bundle
