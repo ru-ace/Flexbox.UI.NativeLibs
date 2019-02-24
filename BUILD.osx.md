@@ -2,8 +2,6 @@
 
 This document contains instructions for manually building bundle of SDL2 shared libs for macOS
 
-**Please note that the best way is to install this libs from the repository of your linux distro.** 
-
 At the end you will got precompiled libs for macOS `>=10.6`:
 * `SDL2` 2.0.8 - will not be updated, because 2.0.9 wants Android API Level >= 26 
 * `SDL2_image` 2.0.4
