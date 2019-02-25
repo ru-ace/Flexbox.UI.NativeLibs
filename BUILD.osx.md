@@ -8,6 +8,8 @@ At the end you will got precompiled libs for macOS `>=10.6`:
 * `SDL2_mixer` 2.0.4
 * `SDL2_ttf` 2.0.15
 
+Please note that external libs for `SDL2_mixer` will be installed into the system and during execution build_system_lib.sh system will be ask your pasword for `sudo make install`  
+
 ## Credits
 
 * SDL2 - https://www.libsdl.org/
@@ -24,9 +26,13 @@ xcode-select --install
 mkdir -p ~/SDL2_osx/osx/
 mkdir -p ~/SDL2_osx/root/
 
-# build_lib.sh script
+# build_lib.sh script - install lib into the ~/SDL2_osx/root/ 
 echo -e "cd ~/SDL2_osx/\$1\nmake clean\n./configure --prefix=`echo ~`/SDL2_osx/root CFLAGS=\"-mmacosx-version-min=10.6 -DMAC_OS_X_VERSION_MIN_REQUIRED=1060\" \$3\nmake -j`sysctl -n hw.ncpu`\ncp \$2 ~/SDL2_osx/osx/\nmake install\n" > ~/SDL2_osx/build_lib.sh
 chmod +x ~/SDL2_osx/build_lib.sh
+
+# build_system_lib.sh script - install lib into the the system
+echo -e "cd ~/SDL2_osx/\$1\nmake clean\n./configure CFLAGS=\"-mmacosx-version-min=10.6 -DMAC_OS_X_VERSION_MIN_REQUIRED=1060\" \$3\nmake -j`sysctl -n hw.ncpu`\ncp \$2 ~/SDL2_osx/osx/\nsudo make install\n" > ~/SDL2_osx/build_system_lib.sh
+chmod +x ~/SDL2_osx/build_system_lib.sh
 ```
 ## Build SDL2 and SDL2_* libs 
 
@@ -47,6 +53,7 @@ ln -s SDL2-2.0.8 SDL2
 ln -s SDL2_image-2.0.4 SDL2_image
 ln -s SDL2_mixer-2.0.4 SDL2_mixer
 ln -s SDL2_ttf-2.0.15 SDL2_ttf
+
 ```
 #### Build bundle
 ```
@@ -61,12 +68,13 @@ ln -s SDL2_ttf-2.0.15 SDL2_ttf
 ~/SDL2_osx/build_lib.sh SDL2_image .libs/libSDL2_image-2.0.0.dylib 
 
 # SDL2_mixer 
-~/SDL2_osx/build_lib.sh SDL2_mixer/external/libogg-1.3.2 src/.libs/libogg.0.dylib
-~/SDL2_osx/build_lib.sh SDL2_mixer/external/flac-1.3.2 src/libFLAC/.libs/libFLAC.8.dylib
-~/SDL2_osx/build_lib.sh SDL2_mixer/external/libvorbis-1.3.5 lib/.libs/*.*.dylib
-~/SDL2_osx/build_lib.sh SDL2_mixer/external/mpg123-1.25.6 src/libmpg123/.libs/libmpg123.0.dylib
-~/SDL2_osx/build_lib.sh SDL2_mixer/external/opus-1.0.3 .libs/libopus.0.dylib 
-~/SDL2_osx/build_lib.sh SDL2_mixer build/.libs/libSDL2_mixer-2.0.0.dylib "--enable-music-mp3-mpg123=`echo ~`/SDL2_osx/root --enable-music-ogg=`echo ~`/SDL2_osx/root --enable-music-flac=`echo ~`/SDL2_osx/root --enable-music-opus=`echo ~`/SDL2_osx/root"
+# build_system_lib.sh will install lib to the system and will ask your password for "sudo make install"
+~/SDL2_osx/build_system_lib.sh SDL2_mixer/external/libogg-1.3.2 src/.libs/libogg.0.dylib
+~/SDL2_osx/build_system_lib.sh SDL2_mixer/external/flac-1.3.2 src/libFLAC/.libs/libFLAC.8.dylib
+~/SDL2_osx/build_system_lib.sh SDL2_mixer/external/libvorbis-1.3.5 lib/.libs/*.*.dylib
+~/SDL2_osx/build_system_lib.sh SDL2_mixer/external/mpg123-1.25.6 src/libmpg123/.libs/libmpg123.0.dylib
+~/SDL2_osx/build_system_lib.sh SDL2_mixer/external/opus-1.0.3 .libs/libopus.0.dylib 
+~/SDL2_osx/build_lib.sh SDL2_mixer build/.libs/libSDL2_mixer-2.0.0.dylib
 
 # SDL2_ttf
 ~/SDL2_osx/build_lib.sh SDL2_ttf/external/freetype-2.9.1 objs/.libs/libfreetype.6.dylib --enable-freetype-config
