@@ -1,4 +1,4 @@
-# SDL2-CS-libs-bundle
+# Flexbox.UI.NativeLibs
 
 This repo contains precompiled `SDL2*` and related shared libs for various platforms. 
 
